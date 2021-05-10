@@ -11,6 +11,7 @@ import string
 
 import hashlib
 
+
 hashlib.sha3_256
 
 
@@ -60,7 +61,7 @@ def SingUp(loginID, loginPSW):
     now = datetime.datetime.now()
     nickname = input("nickname을 입력하세요.")
 
-    userid = f"{now.year}{'%02d'%now.month}{now.day}{random.randint(1000,9999)}{random.randint(1000,9999)}"
+    userid = f"{random.randint(1000,9999)}{random.randint(1000,9999)}"
 
     nickCode = ""
     for i in range(5):
@@ -83,6 +84,7 @@ def SingUp(loginID, loginPSW):
         "nickname": nickname,
         "nickcode": nickCode,
         "salt": salt,
+        "registerdate": f"{now.year}{'%02d'%now.month}{now.day}",
     }
 
     with open(f"data/user{userid}.json", "w", encoding="UTF-8") as f:

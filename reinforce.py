@@ -34,17 +34,15 @@ def dorein(level):
         return -10
 
 
-level = 1
-maxlevel = 20
+# level = 1
+# maxlevel = 20
 
-while level != maxlevel:
-    result = dorein(level)
+# while level != maxlevel:
+#     result = dorein(level)
 
-    if result == 1:
-        level += 1
-    elif result == -5:
-        level = 1
-    elif result == -10:
-        break
-
-    print(level)
+#     if result == 1:
+#         level += 1
+#     elif result == -5:
+#         level = 1
+#     elif result == -10:
+#         break
